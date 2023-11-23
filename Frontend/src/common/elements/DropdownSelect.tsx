@@ -41,7 +41,7 @@ const DropdownSelect: FC<SelectProps> = ({
       {({ open }) => (
         <Fragment>
           <div className={classNames('relative', className || '')}>
-            <div className="relative h-[50px]">
+            <div className="relative h-[50px] w-[600px]">
               <Combobox.Button className="absolute inset-y-0 flex items-center justify-start left-6 focus:outline-none cursor-none">
                 {icon}
               </Combobox.Button>
