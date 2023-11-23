@@ -9,12 +9,20 @@ import Select from '@/common/elements/Select'
 
 const MainPage: FC = () => {
   const [options, setOptions] = useState<IOption[]>([])
+
   const [defaultValue, setDefaultValue] = useState<IOption>({
     id: '',
     label: '',
     value: '',
   })
-  const [permission, setPermission] = useState<IOption>({
+
+  const [date, setDate] = useState<IOption>({
+    id: 0,
+    label: '',
+    value: '',
+  })
+
+  const [location, setLocation] = useState<IOption>({
     id: 0,
     label: '',
     value: '',
@@ -65,7 +73,7 @@ const MainPage: FC = () => {
           <Select
             className="w-full"
             options={[]}
-            value={permission}
+            value={date}
             onChange={() => {}}
             placeholder="Date"
             mode="square"
@@ -73,9 +81,9 @@ const MainPage: FC = () => {
           <Select
             className="w-full"
             options={[]}
-            value={permission}
+            value={location}
             onChange={() => {}}
-            placeholder="Date"
+            placeholder="Location"
             mode="round"
           />
         </div>

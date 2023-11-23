@@ -43,7 +43,12 @@ const Select: FC<SelectProps> = ({
     <Combobox value={value} onChange={onChange} disabled={disabled}>
       {({ open }) => (
         <Fragment>
-          <div className={classNames('relative', className || '')}>
+          <div
+            className={classNames(
+              'relative h-[50px] w-[215px]',
+              className || ''
+            )}
+          >
             <Combobox.Button
               className={classNames(
                 selectClass ||
