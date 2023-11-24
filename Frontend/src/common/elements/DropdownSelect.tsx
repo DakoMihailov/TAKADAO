@@ -70,13 +70,13 @@ const DropdownSelect: FC<SelectProps> = ({
                     key={option.id}
                     className={({ active }) =>
                       classNames(
-                        active ? 'bg-gray-100' : 'rounded-xl ',
-                        'relative cursor-pointer select-none py-2 hover:bg-gray-100/40 '
+                        active ? 'bg-gray-100/40' : 'rounded-xl ',
+                        'relative cursor-pointer select-none py-2 '
                       )
                     }
                     value={option}
                   >
-                    <div className="flex items-center justify-between w-full hover:bg-gray-600/40">
+                    <div className="flex items-center justify-between w-full">
                       <span
                         className={classNames(
                           'break-all flex-1 text-base text-gray-200 p-2'
