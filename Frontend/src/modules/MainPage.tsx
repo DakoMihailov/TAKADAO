@@ -6,6 +6,8 @@ import api from '@/api'
 import { IOption } from '@/interfaces'
 import { Search } from '@/common/components/Icons'
 import Select from '@/common/elements/Select'
+import bg from '../../public/background.png'
+import Image from 'next/image'
 
 const MainPage: FC = () => {
   const [options, setOptions] = useState<IOption[]>([])

@@ -43,16 +43,11 @@ const Select: FC<SelectProps> = ({
     <Combobox value={value} onChange={onChange} disabled={disabled}>
       {({ open }) => (
         <Fragment>
-          <div
-            className={classNames(
-              'relative h-[50px] w-[215px]',
-              className || ''
-            )}
-          >
+          <div className={classNames('relative h-[50px] ', className || '')}>
             <Combobox.Button
               className={classNames(
                 selectClass ||
-                  'relative h-full w-full form-container cursor-default px-6 py-3 text-left bg-gray-100 text-gray-200 text-sm hover:cursor-pointer',
+                  'relative h-full w-[215px] form-container cursor-default px-6 py-3 text-left bg-gray-100/40 text-gray-200 text-sm hover:cursor-pointer ',
                 mode === 'round' ? ' rounded-br-2xl' : ''
               )}
             >
@@ -70,7 +65,7 @@ const Select: FC<SelectProps> = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Combobox.Options className="absolute z-10 w-full px-6 py-3 mt-2 overflow-auto bg-gray-100 rounded-bl-2xl rounded-br-2xl">
+              <Combobox.Options className="absolute z-10 w-full px-6 py-3 mt-2 overflow-auto bg-gray-100/40 rounded-bl-2xl rounded-br-2xl">
                 {filtered.map((option) => (
                   <Combobox.Option
                     key={option.id}
@@ -97,7 +92,7 @@ const Select: FC<SelectProps> = ({
                   </Combobox.Option>
                 ))}
                 {filtered.length === 0 && (
-                  <div className="p-2 text-base text-gray-200 bg-gray-100 hover:cursor-pointer">
+                  <div className="p-1 text-base text-gray-200 hover:cursor-pointer">
                     Nothing found
                   </div>
                 )}

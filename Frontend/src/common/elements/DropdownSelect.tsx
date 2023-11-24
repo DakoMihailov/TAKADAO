@@ -47,7 +47,7 @@ const DropdownSelect: FC<SelectProps> = ({
               </Combobox.Button>
               <Combobox.Input
                 className={classNames(
-                  'w-full h-full pl-[60px] pr-6 py-3  font-medium text-base text-gray-200 bg-gray-100 outline-none cursor-text',
+                  'w-full h-full pl-[60px] pr-6 py-3  font-medium text-base text-gray-200 bg-gray-100/40 outline-none cursor-text',
                   mode === 'round' ? 'rounded-tl-2xl' : ''
                 )}
                 onChange={(e) => {
@@ -64,19 +64,19 @@ const DropdownSelect: FC<SelectProps> = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Combobox.Options className="absolute z-10 w-full px-6 py-3 mt-2 overflow-auto bg-gray-100 rounded-bl-2xl rounded-br-2xl">
+              <Combobox.Options className="absolute z-10 w-full px-6 py-3 mt-2 overflow-auto bg-gray-100/40 rounded-bl-2xl rounded-br-2xl">
                 {filtered.map((option) => (
                   <Combobox.Option
                     key={option.id}
                     className={({ active }) =>
                       classNames(
                         active ? 'bg-gray-100' : 'rounded-xl ',
-                        'relative cursor-pointer select-none py-2 hover:bg-gray-100 '
+                        'relative cursor-pointer select-none py-2 hover:bg-gray-100/40 '
                       )
                     }
                     value={option}
                   >
-                    <div className="flex items-center justify-between w-full hover:bg-gray-600">
+                    <div className="flex items-center justify-between w-full hover:bg-gray-600/40">
                       <span
                         className={classNames(
                           'break-all flex-1 text-base text-gray-200 p-2'
@@ -88,7 +88,7 @@ const DropdownSelect: FC<SelectProps> = ({
                   </Combobox.Option>
                 ))}
                 {filtered.length === 0 && (
-                  <div className="p-2 text-base text-gray-200 bg-gray-100 hover:cursor-pointer">
+                  <div className="p-1 text-base text-gray-200 hover:cursor-pointer">
                     Nothing found
                   </div>
                 )}
